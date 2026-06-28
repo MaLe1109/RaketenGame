@@ -2,7 +2,7 @@ const app = new PIXI.Application();
 const ufoList = []; 
 document.body.appendChild(app.view);
 
-const rocket = PIXI.Sprite.from("assets/rocket.png");
+const rocket = PIXI.Sprite.from("rocket.png");
 rocket.x = 350;
 rocket.y = 520;
 rocket.scale.x = 0.05;
@@ -10,7 +10,7 @@ rocket.scale.y = 0.05;
 app.stage.addChild(rocket);
 
 gameInterval(function () {
-  const ufo = PIXI.Sprite.from('assets/ufo'+ random(1,2) + '.png');
+  const ufo = PIXI.Sprite.from('ufo'+ random(1,2) + '.png');
   ufo.x = random(0, 700);
   ufo.y = -25;
   ufo.scale.x = 0.1;
@@ -34,7 +34,7 @@ function rightKeyPressed(){
 }
 
 function spaceKeyPressed() {
-     const bullet = PIXI.Sprite.from('assets/bullet.png');
+     const bullet = PIXI.Sprite.from('bullet.png');
   bullet.x = rocket.x + 13;
   bullet.y = 500;
   bullet.scale.x = 0.02;
